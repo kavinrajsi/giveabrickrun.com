@@ -1,1 +1,134 @@
-giveabrickrun.com
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="noindex" />
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<title>Home</title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/script.js"> </script>
+</head>
+<body>
+<!-- header -->
+<header class="header" role="banner">
+	<nav class="header-navigation fixed-top" role="navigation">
+		<h1 class="header-logo">
+			<a href="index.html">
+			<img src="img/logo.png">
+			</a>
+		</h1>
+		<div class="menu-icon">
+			<span> </span>	
+		</div>
+		<div class="navigation-list" role="navigation">
+			<ul>
+				<li><a href="index.html">home </a></li>
+				<li><a href="about-us.html">about us</a></li>
+				<li><a href="event-details.html">event details</a></li>
+			</ul>
+		</div>
+		<div class="cta-trigger">
+			<a href="#" class="cta-btn"> register </a>
+		</div>
+	</nav>
+</header>
+<!-- header -->
+<main role="main" class="container">
+<div class="intro-left-side">
+	<h1 class="site-title"> Give a Brick Run </h1>
+	<h2 class="site-title-sub"> Her life starts at your finish line. </h2>
+	<h3 class="marthon-lenght"> <em>2km Walk /</em> <em>5km &amp; 10km Run</em></h3>
+	<img src="img/marathon.png" alt="marathon runner" >
+	<ul class="sponsor-list">
+		<li>
+			<figure>
+  				<figcaption>Platinum Sponsor</figcaption>
+  				<img src="img/ozone-group.png" alt="Platinum Sponsor - Ozone group" >
+			</figure>
+		</li>
+		<li>
+			<figure>
+  				<figcaption>Co-Sponsor</figcaption>
+  				<img src="img/ramanujan-it-city.png" alt="Co-Sponsor - Ramanujan it city" >
+			</figure>
+		</li>
+		<li>
+			<figure>
+  				<figcaption>Co-Sponsor</figcaption>
+  				<img src="img/kalyanamalai.png" alt="Co-Sponsor - Kalyanamalai" >
+			</figure>
+		</li>
+	</ul>
+</div> <!-- intro-left-side -->
+<div class="intro-right-side">
+<div class="main-sponsor">
+	<div class="clock-timer">
+		<time>
+<script type="application/javascript">
+
+var myCountdownTest = new Countdown({
+	month:1, 
+	day:1, 
+	width:300, 
+	height:40, 
+	padding : 1.0, // Sets the text size to a percentage of the overall height. (I probably should have nemed this better.)
+	numbers		: 	{
+		font 	: "Arial",
+		color	: "#FFFFFF",
+		bkgd	: "#000",
+		fontSize : 200,
+		rounded	: 0.15,				// percentage of size 
+	},
+	labels : {
+		textScale : 1.0,
+		offset :0
+	} // <- no comma on last item!
+});
+</script>
+		</time>
+	</div>
+	<img src="img/mustang.png" alt="madras mustang" >
+</div>
+<div class="organizer-detail">
+	<p>
+		<em class="rwd"> Registration FEE : Rs. 600/- </em>
+		<em class="rwd"> (Includes : T-Shirt, Goodie bag, </em>
+		<em class="rwd"> and Breakfast) </em>
+	</p>
+	<figure class="cbcrf">
+		<img src="img/cbcrf-hospital.png" alt="CBCRF Hospital" >
+		<figcaption>Proposed CBCRF Hospital</figcaption>
+	</figure>
+</div>
+	<div class="location">
+		<p class="info-title">EVENT ON</p>
+		<p class="place-time">Sunday, 20th August 2017, 5:00 am </p>
+		<p class="place-time">@ Olcott Memorial School, Besant Nagar </p>
+		<p class="conditions"><sup>*</sup>Conditions Apply</p>
+	</div>
+</div> <!-- intro-right-side -->
+</main>
+<!-- main -->
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script>
+<script type="text/javascript">
+	//menu
+document.querySelector(".menu-icon")
+	.addEventListener("click", function () {
+	  this.classList.toggle("active");
+	document.querySelector('.navigation-list').classList.toggle("open");
+	document.querySelector('body').classList.toggle("nav-open");
+});
+</script>
+</body>
+</html>
