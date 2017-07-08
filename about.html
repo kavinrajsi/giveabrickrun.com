@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="robots" content="noindex" />
+	<meta name="author" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<title>About </title>
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#000">
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<!-- header -->
+<header class="header" role="banner">
+	<nav class="header-navigation fixed-top" role="navigation">
+		<h1 class="header-logo">
+			<a href="index.html">
+			<img src="img/logo.png">
+			</a>
+		</h1>
+		<div class="menu-icon">
+			<span> </span>
+		</div>
+		<div class="navigation-list" role="navigation">
+			<ul>
+				<li><a href="index.html">home </a></li>
+				<li><a href="about-us.html">about us</a></li>
+				<li><a href="event-details.html">event details</a></li>
+			</ul>
+		</div>
+		<div class="cta-trigger">
+			<a href="#" class="cta-btn"> register </a>
+		</div>
+	</nav>
+</header>
+<!-- header -->
+<div class="about-us">
+	<div class="container">
+		<h2 class="page-title"> about us </h2>
+		<section class="aboutus-page">
+			<div class="tab-listener">
+			 <ul id="tabs">
+			      <li><a href="#cbcrf">CBCRF</a></li>
+			      <li><a href="#madras-mustang">Madras Mustangs</a></li>
+			    </ul>
+			</div> <!-- tab-listener -->
+			<div class="tab-container">
+				<div class="tab-content" id="cbcrf">
+					<p>CBCRF is a non-profit initiative for improving diagnostics and treatment options for breast cancer that will enhance survival and improve quality of life in every way.  CBCRF is a new model for the breast cancer which aims to be a self-sustainable non-profit institution bringing the world class breast cancer care to all India.  The hospital is committed to research and dedicated to going beyond state of art facility by pioneering news ways to diagnose, treat and prevent breast cancer.</p>
+					<p class="list-title">The Proposed facility includes :</p>
+					<div class="gird6">
+						<ul>
+							<li>Preventive oncology</li>
+							<li>Research</li>
+							<li>Breast screening and diagnostic services</li>
+							<li>Breast Pathology and molecular oncology</li>
+							<li>Breast cancer genetics</li>
+							<li>Breast cancer surgical services.</li>
+							<li>Breast cosmetic and re-constructive services</li>
+						</ul>
+						<ul>
+							<li>Medical oncology services</li>
+							<li>Radiation oncology services</li>
+							<li>Psycho oncology services</li>
+							<li>Rehabilitation services</li>
+							<li>Palliative care </li>
+							<li>Holistic care- alternative therapies, accessories – prosthesis, hair care &amp; life style mgmt.</li>
+							<li>Provision for long distance patients to stay on / off campus.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="tab-content" id="madras-mustang">
+			      		<h2>madras-mustang</h2>
+			    	</div>
+			</div> <!-- tab-container -->
+		</section> <!-- aboutus-page -->
+	</div> <!-- container -->
+</div><!-- about us -->
+
+<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"> </script> -->
+<script type="text/javascript">
+//menu
+document.querySelector(".menu-icon")
+	.addEventListener("click", function () {
+	  this.classList.toggle("active");
+	document.querySelector('.navigation-list').classList.toggle("open");
+	document.querySelector('body').classList.toggle("nav-open");
+});
+
+// Tab
+    //<![CDATA[
+
+    var tabLinks = new Array();
+    var contentDivs = new Array();
+
+    function init() {
+
+      // Grab the tab links and content divs from the page
+      var tabListItems = document.getElementById('tabs').childNodes;
+      for ( var i = 0; i < tabListItems.length; i++ ) {
+        if ( tabListItems[i].nodeName == "LI" ) {
+          var tabLink = getFirstChildWithTagName( tabListItems[i], 'A' );
+          var id = getHash( tabLink.getAttribute('href') );
+          tabLinks[id] = tabLink;
+          contentDivs[id] = document.getElementById( id );
+        }
+      }
+
+      // Assign onclick events to the tab links, and
+      // highlight the first tab
+      var i = 0;
+
+      for ( var id in tabLinks ) {
+        tabLinks[id].onclick = showTab;
+        tabLinks[id].onfocus = function() { this.blur() };
+        if ( i == 0 ) tabLinks[id].className = 'selected';
+        i++;
+      }
+
+      // Hide all content divs except the first
+      var i = 0;
+
+      for ( var id in contentDivs ) {
+        if ( i != 0 ) contentDivs[id].className = 'tab-content hide';
+        i++;
+      }
+    }
+
+    function showTab() {
+      var selectedId = getHash( this.getAttribute('href') );
+
+      // Highlight the selected tab, and dim all others.
+      // Also show the selected content div, and hide all others.
+      for ( var id in contentDivs ) {
+        if ( id == selectedId ) {
+          tabLinks[id].className = 'selected';
+          contentDivs[id].className = 'tab-content';
+        } else {
+          tabLinks[id].className = '';
+          contentDivs[id].className = 'tab-content hide';
+        }
+      }
+
+      // Stop the browser following the link
+      return false;
+    }
+
+    function getFirstChildWithTagName( element, tagName ) {
+      for ( var i = 0; i < element.childNodes.length; i++ ) {
+        if ( element.childNodes[i].nodeName == tagName ) return element.childNodes[i];
+      }
+    }
+
+    function getHash( url ) {
+      var hashPos = url.lastIndexOf ( '#' );
+      return url.substring( hashPos + 1 );
+    }
+ window.onload = init;
+    //]]>
+    </script>
+</body>
+</html>
