@@ -477,6 +477,7 @@ em{
 
 
 /* About Us Page */
+.event-details,
 .about-us{
 	background: #fff;
 	padding-top: 90px;
@@ -523,9 +524,23 @@ em{
 .tab-content.hide {
 	display: none;
 }
+.event-details p,
 .tab-content p,
 .tab-content li{
 	font: 400 18px/28px 'Lato', sans-serif;
+	color: #222;
+}
+.event-details p{
+	margin-bottom: 10px;
+}
+.event-details p.list-title{
+	font: 700 20px/40px 'Lato', sans-serif;
+	color: #222;
+	margin-top: 30px;
+}
+em.page-title{
+	display: inline-block;
+	font: 700 20px/40px 'Lato', sans-serif;
 	color: #222;
 }
 .tab-content p.list-title{
