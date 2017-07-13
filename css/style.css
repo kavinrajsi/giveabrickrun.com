@@ -95,6 +95,9 @@ body{
 	 -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .nav-open{
 	overflow: hidden;
@@ -235,7 +238,10 @@ header a{
 		height: 50px;
 	}
 	.cta-trigger a{
-		padding: 14px 10px;
+		padding: 16px 30px;
+		color: #974218;
+		background: #fff;
+		border-radius: 0px;
 	}
 
 }
@@ -257,7 +263,7 @@ header a{
 	}
 	.navigation-list li a{
 		display: block;
-		padding: 15px 16px;
+		padding: 14px 16px;
 	}
 	.cta-trigger{
 		position: absolute;
@@ -411,6 +417,7 @@ em{
 		font: 900 15px/32px 'Lato', sans-serif;
 		color: #974218;
 		padding: 5px 10px;
+		margin-bottom: 0;
 		background: #fff;
 		text-align: right;
 		display: inline-block;
@@ -469,18 +476,23 @@ em{
 @media all and (min-width: 1200px){
 	.main-sponsor{
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: flex-end;
 		flex-direction: row;
-
+	}
+	.intro-right-side{
+		align-items: flex-end;
 	}
 }
 
 
 /* About Us Page */
+.contact-us,
 .event-details,
 .about-us{
+	flex: 1;
 	background: #fff;
 	padding-top: 90px;
+	padding-bottom: 60px;
 }
 .page-title{
 	text-transform: capitalize;
@@ -504,18 +516,20 @@ em{
 		flex-direction: row;
 	}
 }
-
+.contactus-page{
+	text-align: center;
+}
 #tabs li a{
 	border-bottom: 1px solid #e6e6e6;
-	border-right: 1px solid #e6e6e6;
-	padding: 10px;
+	border-right: 5px solid #e6e6e6;
+	padding: 20px 10px;
 	font: 700 24px/30px 'Lato', sans-serif;
 	color: #afafaf;
 	text-align: right;
 	width: 230px;
 }
 #tabs li a.selected{
-	border-right: 1px solid #783a2f;
+	border-right: 5px solid #783a2f;
 	color: #783a2f;
 }
 .tab-container{
@@ -524,15 +538,19 @@ em{
 .tab-content.hide {
 	display: none;
 }
+.contact-us p,
 .event-details p,
 .tab-content p,
 .tab-content li{
 	font: 400 18px/28px 'Lato', sans-serif;
 	color: #222;
 }
+p,
+.contact-us p,
 .event-details p{
 	margin-bottom: 10px;
 }
+.contact-us p.list-title,
 .event-details p.list-title{
 	font: 700 20px/40px 'Lato', sans-serif;
 	color: #222;
@@ -584,3 +602,18 @@ em.page-title{
 	}
 }
 
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background: #974218;
+}
+ footer p,
+.contact-us footer p{
+	color: #fff;
+	margin-bottom: 0;
+}
+.email-link{
+	color: #974218;
+}
