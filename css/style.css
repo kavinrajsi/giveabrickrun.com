@@ -278,7 +278,7 @@ em{
 	}
 	.navigation-list li a{
 		display: block;
-		padding: 15px 16px;
+		padding: 14px 16px;
 	}
 	.cta-trigger{
 		position: absolute;
@@ -625,6 +625,7 @@ footer{
 }
 .email-link{
 	color: #974218;
+<<<<<<< HEAD
 }
 footer a{
 	color: #fff;
@@ -703,3 +704,6 @@ footer a{
 #counter i {
   font-style: normal;
 }
+=======
+}
+>>>>>>> 3ec78615251a6bf56faecf0227d7d6501dc3223f
