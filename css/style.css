@@ -648,7 +648,6 @@ footer{
 }
 .email-link{
 	color: #974218;
-<<<<<<< HEAD
 }
 footer a{
 	color: #fff;
@@ -731,7 +730,9 @@ footer a{
 li.holi:before{
 	top: 12px;
 }
-=======
-
->>>>>>> 3ec78615251a6bf56faecf0227d7d6501dc3223f
-
+.event-details p em{
+	display: inline-block;
+	font: 700 20px/40px 'Lato', sans-serif;
+	color: #222;
+	margin-bottom: 30px;
+}
