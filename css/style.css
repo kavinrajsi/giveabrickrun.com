@@ -718,3 +718,7 @@ footer a{
 =======
 }
 >>>>>>> 3ec78615251a6bf56faecf0227d7d6501dc3223f
+
+li.holi:before{
+	top: 12px;
+}
