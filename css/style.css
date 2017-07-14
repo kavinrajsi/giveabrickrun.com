@@ -489,10 +489,14 @@ em{
 }
 
 @media all and (min-width: 1200px){
-	.main-sponsor{
+	.main-sponsor,
+	.organizer-detail{
 		justify-content: space-between;
-		align-items: flex-end;
+		align-items: flex-start;
 		flex-direction: row;
+	}
+	.main-sponsor{
+		align-items: center;
 	}
 	.intro-right-side{
 		align-items: flex-end;
