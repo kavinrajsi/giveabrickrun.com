@@ -243,7 +243,9 @@ header a{
 		background: #fff;
 		border-radius: 0px;
 	}
-
+	.marthon-lenght{
+		padding: 10px;
+	}
 }
 
 @media all and (min-width: 480px){
@@ -298,6 +300,10 @@ em{
 	  justify-content: flex-end;
 	  align-items: center;
 	}
+	.marthon-lenght em{
+		display: inline-block;
+	}
+
 }
 @media (min-width: 992px) {
     .container {
@@ -633,7 +639,8 @@ footer a{
 
 #counter {
   text-align: center;
-  margin: 50px auto;
+  /*margin: 50px auto;*/
+  margin: 0 20px;
   display: block;
   font-size: 2em;
   color: #282828;
