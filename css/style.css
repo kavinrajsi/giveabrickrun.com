@@ -620,8 +620,20 @@ em.page-title{
 		 margin-right: 20px;
 		 margin-bottom: 30px;
 	}
+	.organizer-detail p{
+		max-width: 300px;
+	}
+	.organizer-detail p em{
+		display: inline-block;
+	}
 }
-
+figure.cbcrf {
+  max-width: 300px;
+  text-align: right;
+}
+.cbcrf figcaption{
+	text-align: right;
+}
 footer{
 	display: flex;
 	justify-content: space-between;
