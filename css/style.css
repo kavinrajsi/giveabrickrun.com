@@ -95,6 +95,9 @@ body{
 	 -webkit-transition: all .2s ease-in-out;
     -o-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 .nav-open{
 	overflow: hidden;
@@ -235,12 +238,30 @@ header a{
 		height: 50px;
 	}
 	.cta-trigger a{
-		padding: 14px 10px;
+		padding: 16px 30px;
+		color: #974218;
+		background: #fff;
+		border-radius: 0px;
 	}
 
 }
 
 @media all and (min-width: 480px){
+	
+}
+
+em{
+	display: block;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
 	.menu-icon{
 		display: none;
 	}
@@ -266,23 +287,17 @@ header a{
 		height: 50px;
 	}
 
-}
-
-em{
-	display: block;
-}
-
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-@media (min-width: 768px) {
     .container {
         width: 750px;
     }
+    .navigation-list ul {
+  		margin-right: 130px;
+	}
+	.navigation-list-container {
+	  display: flex;
+	  justify-content: flex-end;
+	  align-items: center;
+	}
 }
 @media (min-width: 992px) {
     .container {
@@ -411,6 +426,7 @@ em{
 		font: 900 15px/32px 'Lato', sans-serif;
 		color: #974218;
 		padding: 5px 10px;
+		margin-bottom: 0;
 		background: #fff;
 		text-align: right;
 		display: inline-block;
@@ -469,18 +485,23 @@ em{
 @media all and (min-width: 1200px){
 	.main-sponsor{
 		justify-content: space-between;
-		align-items: flex-start;
+		align-items: flex-end;
 		flex-direction: row;
-
+	}
+	.intro-right-side{
+		align-items: flex-end;
 	}
 }
 
 
 /* About Us Page */
+.contact-us,
 .event-details,
 .about-us{
+	flex: 1;
 	background: #fff;
 	padding-top: 90px;
+	padding-bottom: 60px;
 }
 .page-title{
 	text-transform: capitalize;
@@ -504,18 +525,20 @@ em{
 		flex-direction: row;
 	}
 }
-
+.contactus-page{
+	text-align: center;
+}
 #tabs li a{
 	border-bottom: 1px solid #e6e6e6;
-	border-right: 1px solid #e6e6e6;
-	padding: 10px;
+	border-right: 5px solid #e6e6e6;
+	padding: 20px 10px;
 	font: 700 24px/30px 'Lato', sans-serif;
 	color: #afafaf;
 	text-align: right;
 	width: 230px;
 }
 #tabs li a.selected{
-	border-right: 1px solid #783a2f;
+	border-right: 5px solid #783a2f;
 	color: #783a2f;
 }
 .tab-container{
@@ -524,15 +547,19 @@ em{
 .tab-content.hide {
 	display: none;
 }
+.contact-us p,
 .event-details p,
 .tab-content p,
 .tab-content li{
 	font: 400 18px/28px 'Lato', sans-serif;
 	color: #222;
 }
+p,
+.contact-us p,
 .event-details p{
 	margin-bottom: 10px;
 }
+.contact-us p.list-title,
 .event-details p.list-title{
 	font: 700 20px/40px 'Lato', sans-serif;
 	color: #222;
@@ -584,3 +611,95 @@ em.page-title{
 	}
 }
 
+footer{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	background: #974218;
+}
+ footer p,
+.contact-us footer p{
+	color: #fff;
+	margin-bottom: 0;
+}
+.email-link{
+	color: #974218;
+}
+footer a{
+	color: #fff;
+}
+
+#counter {
+  text-align: center;
+  margin: 50px auto;
+  display: block;
+  font-size: 2em;
+  color: #282828;
+  background: #fff;
+  padding: 32px 20px 20px;
+  border-radius: 10px;
+}
+@media (max-width: 500px) {
+  #counter {
+    font-size: 1.5em;
+  }
+}
+#counter span, #counter i {
+  display: inline-block;
+  vertical-align: middle;
+}
+#counter span {
+  font-family: sans-serif;
+  text-align: center;
+  min-width: 45px;
+  text-rendering: optimizeLegibility;
+  position: relative;
+  background-color: #353535;
+  margin: 0 2px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0.5px rgba(255, 255, 255, 0.4);
+  border: 1px solid black;
+  text-shadow: 0 0 2px black;
+}
+#counter span.days {
+  margin-right: 20px;
+}
+#counter span.days:before {
+  content: "DAYS";
+}
+#counter span.hours:before {
+  content: "HOUR";
+}
+#counter span.minutes:before {
+  content: "MIN";
+}
+#counter span.seconds:before {
+  content: "SEC";
+}
+#counter span:before {
+  top: -20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: block;
+  color: black;
+  font-size: 0.35em;
+  text-shadow: none;
+}
+#counter span:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  margin-top: 0.5px;
+  background-color: black;
+  box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+#counter i {
+  font-style: normal;
+}
