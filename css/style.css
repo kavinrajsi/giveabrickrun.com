@@ -416,6 +416,7 @@ em{
 	.cbcrf figcaption{
 		font: 900 20px/29.64px 'Lato', sans-serif;
 		text-align: center;
+		max-width: 360px;
 	}
 	.location{
 		display: flex;
@@ -649,7 +650,7 @@ footer a{
   font-size: 2em;
   color: #282828;
   background: #fff;
-  padding: 32px 20px 20px;
+  padding: 32px 16px 20px;
   border-radius: 10px;
 }
 @media (max-width: 500px) {
@@ -677,7 +678,7 @@ footer a{
   text-shadow: 0 0 2px black;
 }
 #counter span.days {
-  margin-right: 20px;
+  margin-right: 10px;
 }
 #counter span.days:before {
   content: "DAYS";
@@ -715,6 +716,10 @@ footer a{
 #counter i {
   font-style: normal;
 }
-=======
+li.holi:before{
+	top: 12px;
 }
+=======
+
 >>>>>>> 3ec78615251a6bf56faecf0227d7d6501dc3223f
+
